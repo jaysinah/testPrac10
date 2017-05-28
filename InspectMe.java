@@ -153,13 +153,13 @@ public class InspectMe
         
         choice = readLineWithDefault("mean", "Choose between 'mean' or 'median'");
         
-        if(choice.equals("median"))
+        if(choice==("median"))
         {
             Stats.median(n1, n2, n3);
 
             valid = true;
         }
-        else if(choice.equals("mean"))
+        else if(choice==("mean"))
         {
             Stats.mean(n1, n2, n3);
             valid = true;
