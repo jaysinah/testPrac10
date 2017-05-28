@@ -73,11 +73,11 @@ public class InspectMe
         choice = readLineWithDefault("Choose between 'feet-inch', 'byte-kb' or 'joule-ev':", "feet-inch");
         if(choice.equals("feet-inch"))
         {
-            unitConvert("feet", "inches", 1/12);
+            unitConvert("feet", "inches", 1.0/12.0);
         }
         else if(choice.equals("byte-kb"))
         {
-            unitConvert("bytes", "kilobytes", 1/1024);
+            unitConvert("bytes", "kilobytes", 1.0/1024.0);
         }
         else if(choice.equals("joule-ev"))
         {
