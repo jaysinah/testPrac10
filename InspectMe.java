@@ -135,12 +135,6 @@ public class InspectMe
         }
     }
     
-    /**
-     * Takes either the mean or median of three real numbers, read from the 
-     * user. This method asks for the three numbers, then asks whether the user
-     * wishes to take the mean or median, and then calculates and outputs the 
-     * result.
-     */
     public static void stats()
     {
         String choice;
@@ -161,12 +155,13 @@ public class InspectMe
         
         if(choice == "mean")
         {
-            median(n1, n2, n3);
+            Stats.median(n1, n2, n3);
+
             valid = true;
         }
         else if(choice == "median")
         {
-            mean(n1, n2, n3);
+            Stats.mean(n1, n2, n3);
             valid = true;
         }
         
@@ -187,33 +182,4 @@ public class InspectMe
      * @param c The 3rd number.
      * @return The mean of a, b and c.
      */
-    public static double mean(double a, double b, double c)
-    {
-        double mean;
-        mean = (a + b + c) / 3;
-        return mean;
-    }
-    
-    /**
-     * Calculates the median of three real numbers.
-     * @param a The 1st number.
-     * @param b The 2nd number.
-     * @param c The 3rd number.
-     * @return The median of a, b and c.
-     */
-    public static double median(double a, double b, double c)
-    {
-        double median = 0.0;
-        
-        median = a;
-        if((b < a && a < c) || (b > a && a > c))
-        {
-            median = a;
-        }
-        else if((a < b && b < c) || (a > b && b > c))
-        {
-            median = b;
-        }
-        return median;
-    }
 }
